@@ -207,6 +207,58 @@ body {
     opacity: 1;
   }
 }
+
+.toc a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #82d9ff;
+  font-size: 1.5em;
+  padding: 12px 20px;
+  margin: 12px 10px;
+  display: inline-block;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.toc a:hover {
+  background-color: #4abde6;
+  transform: scale(1.05);
+}
+
+/* Footer texte */
+.footer-text {
+  max-width: 800px;
+  margin: 50px auto 20px auto;
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: center;
+  color: #cccccc;
+}
+.footer-text strong {
+  color: #82d9ff;
+}
+
+/* Bouton retour haut amélioré */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background-color: #82d9ff;
+  color: white;
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+}
+#scrollTopBtn:hover {
+  background-color: #4abde6;
+  transform: scale(1.2);
+}
+
 </style>
   <script src="https://www.youtube.com/iframe_api"></script>
 
