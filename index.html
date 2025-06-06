@@ -9,7 +9,8 @@
     body {
       font-family: "Comic Sans MS", "Arial Rounded MT Bold", "Arial", sans-serif;
       margin: 20px;
-      background-color: #fdfdfd;
+      background-color: #121212;
+      color: #e0e0e0;
     }
     h1 {
       text-align: center;
@@ -33,7 +34,7 @@
     }
     a {
       text-decoration: none;
-      color: #3366cc;
+      color: #82aaff;
       font-weight: bold;
     }
     section {
@@ -42,28 +43,27 @@
     }
     img {
       width: 100%;
+      max-width: 700px;
       height: auto;
       display: block;
       margin: 30px auto;
       border-radius: 20px;
     }
     .iframe-container {
-      position: relative;
       width: 100%;
-      padding-bottom: 56.25%; /* 16:9 ratio */
-      height: 0;
+      max-width: 700px;
+      margin: 20px auto;
+      aspect-ratio: 16 / 9;
       overflow: hidden;
-    }
-    .iframe-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
       border-radius: 12px;
     }
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
     pre {
-      background: #f4f4f4;
+      background: #1e1e1e;
       padding: 25px;
       border-radius: 12px;
       white-space: pre-wrap;
@@ -101,6 +101,15 @@
       cursor: pointer;
       padding: 20px;
       border-radius: 50%;
+    }
+    /* Responsive smartphone */
+    @media (max-width: 768px) {
+      img {
+        max-width: 100%;
+      }
+      .iframe-container {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -162,9 +171,9 @@
 
     <section id="promenons-dans-les-bois">
       <h2>Promenons-dans les bois</h2>
-      <img src="images/promenons_dans_les_bois.png" alt="Promenons-dans les bois">
+      <img src="images/promenons_dans_les_bois.png" alt="Promenons-dans les bois" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/KrLuJchq294" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/KrLuJchq294" allowfullscreen></iframe>
       </div>
       <pre>Promenons-nous dans les bois
 Pendant que le loup n'y est pas
@@ -196,9 +205,9 @@ Sauvons-nous, vite, vite
     
     <section id="alouette-gentille-alouette">
       <h2>Alouette, gentille alouette</h2>
-      <img src="images/alouette_gentille_alouette.png" alt="Alouette, gentille alouette">
+      <img src="images/alouette_gentille_alouette.png" alt="Alouette, gentille alouette" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/udFlaqoKMDk" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/udFlaqoKMDk" allowfullscreen></iframe>
       </div>
       <pre>Alouette, gentille alouette
 Alouette, je te plumerai
@@ -234,9 +243,9 @@ Oh, oh, oh, oh, oh
     
     <section id="une-poule-sur-un-mur">
       <h2>Une poule sur un mur</h2>
-      <img src="images/une_poule_sur_un_mur.png" alt="Une poule sur un mur">
+      <img src="images/une_poule_sur_un_mur.png" alt="Une poule sur un mur" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/QAoR_BgtHTY" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/QAoR_BgtHTY" allowfullscreen></iframe>
       </div>
       <pre>Une poule sur un mur
 Qui picore du pain dur
@@ -249,9 +258,9 @@ et puis s’en va.
     
     <section id="meunier-tu-dors">
       <h2>Meunier, tu dors</h2>
-      <img src="images/meunier_tu_dors.png" alt="Meunier, tu dors">
+      <img src="images/meunier_tu_dors.png" alt="Meunier, tu dors" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/kaOwxEsPvx0" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/kaOwxEsPvx0" allowfullscreen></iframe>
       </div>
       <pre>Meunier tu dors, ton moulin, ton moulin va trop vite
 Meunier tu dors, ton moulin, ton moulin va trop fort
@@ -274,9 +283,9 @@ Meunier, tu dors, ton moulin est bien mort
     
     <section id="sur-le-pont-davignon">
       <h2>Sur le pont d’avignon</h2>
-      <img src="images/sur_le_pont_davignon.png" alt="Sur le pont d’avignon">
+      <img src="images/sur_le_pont_davignon.png" alt="Sur le pont d’avignon" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/iLvVZny4HzQ" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/iLvVZny4HzQ" allowfullscreen></iframe>
       </div>
       <pre>Sur le pont d’Avignon,
 L’on y danse, l’on y danse,
@@ -317,9 +326,9 @@ Les laveuses font comme ça</pre>
     
     <section id="le-bon-roi-dagobert">
       <h2>Le bon Roi Dagobert</h2>
-      <img src="images/le_bon_roi_dagobert.png" alt="Le bon Roi Dagobert">
+      <img src="images/le_bon_roi_dagobert.png" alt="Le bon Roi Dagobert" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/aqKjdSjNgRU" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/aqKjdSjNgRU" allowfullscreen></iframe>
       </div>
       <pre>Le bon roi Dagobert
 A mis sa culotte à l’envers ;
@@ -407,9 +416,9 @@ Ne pourrais-tu mourir pour moi ?
     
     <section id="dansons-la-capucine">
       <h2>Dansons la capucine</h2>
-      <img src="images/dansons_la_capucine.png" alt="Dansons la capucine">
+      <img src="images/dansons_la_capucine.png" alt="Dansons la capucine" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/_E2e53KhKII" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/_E2e53KhKII" allowfullscreen></iframe>
       </div>
       <pre>Dansons la capucine
 Y a pas de pain chez nous
@@ -440,9 +449,9 @@ Youh!
     
     <section id="lundi-matin-(le-ptit-prince-a-dit)">
       <h2>Lundi matin (Le p'tit Prince a dit)</h2>
-      <img src="images/lundi_matin_le_ptit_prince_a_dit.png" alt="Lundi matin (Le p'tit Prince a dit)">
+      <img src="images/lundi_matin_le_ptit_prince_a_dit.png" alt="Lundi matin (Le p'tit Prince a dit)" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/t6qKrcIayHc" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/t6qKrcIayHc" allowfullscreen></iframe>
       </div>
       <pre>Lundi matin
 L'emp'reur, sa femme
@@ -467,9 +476,9 @@ le p'tit prince a dit :
     
     <section id="une-souris-verte">
       <h2>Une souris verte</h2>
-      <img src="images/une_souris_verte.png" alt="Une souris verte">
+      <img src="images/une_souris_verte.png" alt="Une souris verte" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/2rt2g_afiAg" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/2rt2g_afiAg" allowfullscreen></iframe>
       </div>
       <pre>Une souris verte qui courait dans l'herbe
 Je l'attrape par la queue, je la montre à ces messieurs
@@ -489,9 +498,9 @@ Elle me fait trois petites crottes
     
     <section id="ainsi-font-font-font-les-petites-marionnettes">
       <h2>Ainsi font font font les petites marionnettes</h2>
-      <img src="images/ainsi_font_font_font_les_petites_marionnettes.png" alt="Ainsi font font font les petites marionnettes">
+      <img src="images/ainsi_font_font_font_les_petites_marionnettes.png" alt="Ainsi font font font les petites marionnettes" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/NjvNn-oRycU" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/NjvNn-oRycU" allowfullscreen></iframe>
       </div>
       <pre>Ainsi font, font, font, les petites marionnettes
 Ainsi font, font, font, trois petits tours et puis s'en vont
@@ -515,9 +524,9 @@ Et elles danseront quand les enfants dormiront
     
     <section id="au-clair-de-la-lune">
       <h2>Au clair de la lune</h2>
-      <img src="images/au_clair_de_la_lune.png" alt="Au clair de la lune">
+      <img src="images/au_clair_de_la_lune.png" alt="Au clair de la lune" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/IYLTc3tGdzc" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/IYLTc3tGdzc" allowfullscreen></iframe>
       </div>
       <pre>Au clair de la Lune
 Mon ami Pierrot
@@ -550,9 +559,9 @@ Sur eux se ferma</pre>
     
     <section id="il-etait-un-petit-navire">
       <h2>Il était un petit navire</h2>
-      <img src="images/il_etait_un_petit_navire.png" alt="Il était un petit navire">
+      <img src="images/il_etait_un_petit_navire.png" alt="Il était un petit navire" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/pHNiPMO5q_s" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/pHNiPMO5q_s" allowfullscreen></iframe>
       </div>
       <pre>Il était un petit navire
 Il était un petit navire
@@ -628,9 +637,9 @@ Ohé ! Ohé !
     
     <section id="cest-la-mère-michel">
       <h2>C'est la mère Michel</h2>
-      <img src="images/cest_la_mere_michel.png" alt="C'est la mère Michel">
+      <img src="images/cest_la_mere_michel.png" alt="C'est la mère Michel" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/aJVN8wHXz68" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/aJVN8wHXz68" allowfullscreen></iframe>
       </div>
       <pre>C'est la mère Michel qui a perdu son chat,
 Qui crie par la fenêtre à qui le lui rendra.
@@ -663,9 +672,9 @@ Dit à la mère Michel : vot' chat il est vendu[3].
     
     <section id="vive-le-vent-dhiver">
       <h2>Vive le vent d’hiver</h2>
-      <img src="images/vive_le_vent_dhiver.png" alt="Vive le vent d’hiver">
+      <img src="images/vive_le_vent_dhiver.png" alt="Vive le vent d’hiver" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/dCXl5_VSaik" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/dCXl5_VSaik" allowfullscreen></iframe>
       </div>
       <pre>Vive le vent, vive le vent, vive le vent d’hiver
 Qui s’en va sifflant, soufflant dans les grands sapins verts
@@ -712,9 +721,9 @@ Boule de neige et jour de l’an et bonne année grand-mère
     
     <section id="a-la-claire-fontaine">
       <h2>À la claire fontaine</h2>
-      <img src="images/a_la_claire_fontaine.png" alt="À la claire fontaine">
+      <img src="images/a_la_claire_fontaine.png" alt="À la claire fontaine" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/-VctOj6Bm4Y" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/-VctOj6Bm4Y" allowfullscreen></iframe>
       </div>
       <pre>À la claire fontaine
 M'en allant promener
@@ -756,9 +765,9 @@ Il y a longtemps que je t'aime jamais je ne t'oublierai
     
     <section id="1-kilomètre-a-pied">
       <h2>1 kilomètre à pied</h2>
-      <img src="images/1_kilometre_a_pied.png" alt="1 kilomètre à pied">
+      <img src="images/1_kilometre_a_pied.png" alt="1 kilomètre à pied" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/OBqrzaDI0sE" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/OBqrzaDI0sE" allowfullscreen></iframe>
       </div>
       <pre>Un kilomètre à pied, ça use, ça use
 Un kilomètre à pied, ça use les souliers.
@@ -773,9 +782,9 @@ Deux kilomètres à pied, ça use les souliers.
     
     <section id="trois-petits-chats">
       <h2>Trois petits chats</h2>
-      <img src="images/trois_petits_chats.png" alt="Trois petits chats">
+      <img src="images/trois_petits_chats.png" alt="Trois petits chats" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/c8rR_EFcETc" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/c8rR_EFcETc" allowfullscreen></iframe>
       </div>
       <pre>Trois p'tits chats, trois p'tits chats, trois p'tits chats, chats, chats
 Chapeau d'paille, chapeau d'paille, chapeau d'paille, paille, paille
@@ -838,9 +847,9 @@ Rofle Me le..
     
     <section id="frère-jacques">
       <h2>Frère Jacques</h2>
-      <img src="images/frere_jacques.png" alt="Frère Jacques">
+      <img src="images/frere_jacques.png" alt="Frère Jacques" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/BC6rvbxdywg" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/BC6rvbxdywg" allowfullscreen></iframe>
       </div>
       <pre>Frère Jacques,
 Levez-vous !
@@ -852,9 +861,9 @@ Bing, Bong, Bong !
     
     <section id="coucou-hibou">
       <h2>Coucou hibou</h2>
-      <img src="images/coucou_hibou.png" alt="Coucou hibou">
+      <img src="images/coucou_hibou.png" alt="Coucou hibou" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/6-JNZOWCTUI" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/6-JNZOWCTUI" allowfullscreen></iframe>
       </div>
       <pre>Dans la forêt lointaine
 On entend le coucou.
@@ -868,9 +877,9 @@ Coucou, coucou, coucou, hibou, coucou.
     
     <section id="fais-dodo-colas-mon-ptit-frère">
       <h2>Fais dodo, Colas mon p'tit frère</h2>
-      <img src="images/fais_dodo_colas_mon_ptit_frere.png" alt="Fais dodo, Colas mon p'tit frère">
+      <img src="images/fais_dodo_colas_mon_ptit_frere.png" alt="Fais dodo, Colas mon p'tit frère" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/LB-RUwDaz20" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/LB-RUwDaz20" allowfullscreen></iframe>
       </div>
       <pre>Fais dodo Colas mon p'tit frère,
 Fais dodo t'auras du lolo ;
@@ -901,9 +910,9 @@ Fais dodo t'auras du lolo.
     
     <section id="jai-du-bon-tabac">
       <h2>J’ai du bon tabac</h2>
-      <img src="images/jai_du_bon_tabac.png" alt="J’ai du bon tabac">
+      <img src="images/jai_du_bon_tabac.png" alt="J’ai du bon tabac" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/NWzecA6NzLg" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/NWzecA6NzLg" allowfullscreen></iframe>
       </div>
       <pre>J'ai du bon tabac dans ma tabatière,
 J'ai du bon tabac, tu n'en auras pas.
@@ -920,9 +929,9 @@ J'ai du bon tabac, tu n'en auras pas.
     
     <section id="savez-vous-planter-des-choux">
       <h2>Savez-vous planter des choux</h2>
-      <img src="images/savez_vous_planter_des_choux.png" alt="Savez-vous planter des choux">
+      <img src="images/savez_vous_planter_des_choux.png" alt="Savez-vous planter des choux" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/iAGV2pcLaAg" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/iAGV2pcLaAg" allowfullscreen></iframe>
       </div>
       <pre>Savez-vous planter les choux
 À la mode, à la mode ?
@@ -966,9 +975,9 @@ On les plante avec le g’nou,
     
     <section id="un-elephant-qui-se-balançait">
       <h2>Un éléphant qui se balançait</h2>
-      <img src="images/un_elephant_qui_se_balancait.png" alt="Un éléphant qui se balançait">
+      <img src="images/un_elephant_qui_se_balancait.png" alt="Un éléphant qui se balançait" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/Ns92r5TQH3k" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/Ns92r5TQH3k" allowfullscreen></iframe>
       </div>
       <pre>Un éléphant qui se balançait
 Sur une toile, toile, toile
@@ -1002,9 +1011,9 @@ Ba da boum
     
     <section id="la-famille-tortue">
       <h2>La famille tortue</h2>
-      <img src="images/la_famille_tortue.png" alt="La famille tortue">
+      <img src="images/la_famille_tortue.png" alt="La famille tortue" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/k72S8XYqi0c" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/k72S8XYqi0c" allowfullscreen></iframe>
       </div>
       <pre>Jamais on a vu
 Jamais on ne verra
@@ -1019,9 +1028,9 @@ Iront toujours au pas
     
     <section id="pirouette-cacahouète">
       <h2>Pirouette, cacahouète</h2>
-      <img src="images/pirouette_cacahouete.png" alt="Pirouette, cacahouète">
+      <img src="images/pirouette_cacahouete.png" alt="Pirouette, cacahouète" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/9Rz8gTYEtx4" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/9Rz8gTYEtx4" allowfullscreen></iframe>
       </div>
       <pre>Il était un petit homme
 Pirouette, cacahuète
@@ -1077,9 +1086,9 @@ Messieurs, Mesdames, applaudissez
     
     <section id="il-etait-une-fermière">
       <h2>Il était une fermière</h2>
-      <img src="images/il_etait_une_fermiere.png" alt="Il était une fermière">
+      <img src="images/il_etait_une_fermiere.png" alt="Il était une fermière" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/sGDUGuDkurQ" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/sGDUGuDkurQ" allowfullscreen></iframe>
       </div>
       <pre>Il était une fermière
 Qui allait au marché
@@ -1100,9 +1109,9 @@ Trois pas de l’autre côté !
     
     <section id="ah-les-crocodiles">
       <h2>Ah les crocodiles</h2>
-      <img src="images/ah_les_crocodiles.png" alt="Ah les crocodiles">
+      <img src="images/ah_les_crocodiles.png" alt="Ah les crocodiles" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/1T9b0cax6s4" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/1T9b0cax6s4" allowfullscreen></iframe>
       </div>
       <pre>Un crocodile, s'en allant en guerre,
 Disait au r'voir à ses petits enfants.
@@ -1148,9 +1157,9 @@ REFRAIN
     
     <section id="les-petits-poissons-dans-leau">
       <h2>Les petits poissons dans l’eau</h2>
-      <img src="images/les_petits_poissons_dans_leau.png" alt="Les petits poissons dans l’eau">
+      <img src="images/les_petits_poissons_dans_leau.png" alt="Les petits poissons dans l’eau" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/LQYZ1taDp9w" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/LQYZ1taDp9w" allowfullscreen></iframe>
       </div>
       <pre>Les petits poissons dans l'eau
 Nagent, nagent, nagent, nagent, nagent
@@ -1167,9 +1176,9 @@ Nagent bien aussi
     
     <section id="dodo-lenfant-do">
       <h2>Dodo, l'enfant do</h2>
-      <img src="images/dodo_lenfant_do.png" alt="Dodo, l'enfant do">
+      <img src="images/dodo_lenfant_do.png" alt="Dodo, l'enfant do" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/11P4zsDr6Ss" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/11P4zsDr6Ss" allowfullscreen></iframe>
       </div>
       <pre>Dodo, l'enfant do
 L'enfant dormira bien vite
@@ -1181,9 +1190,9 @@ L'enfant dormira bientôt.
     
     <section id="am-stram-gram">
       <h2>Am stram gram</h2>
-      <img src="images/am_stram_gram.png" alt="Am stram gram">
+      <img src="images/am_stram_gram.png" alt="Am stram gram" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/D3jZmWdcebs" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/D3jZmWdcebs" allowfullscreen></iframe>
       </div>
       <pre>Am, stram, gram,
 Pic et pic et colégram,
@@ -1195,9 +1204,9 @@ Am, stram, gram.
     
     <section id="pomme-de-reinette-et-pomme-dapi">
       <h2>Pomme de reinette et pomme d'api</h2>
-      <img src="images/pomme_de_reinette_et_pomme_dapi.png" alt="Pomme de reinette et pomme d'api">
+      <img src="images/pomme_de_reinette_et_pomme_dapi.png" alt="Pomme de reinette et pomme d'api" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/pwGR7vpQVCo" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/pwGR7vpQVCo" allowfullscreen></iframe>
       </div>
       <pre>Pomme de reinette et pomme d'api
 Tapis tapis rouge
@@ -1214,9 +1223,9 @@ Tapis tapis gris
     
     <section id="tourne-tourne-petit-moulin">
       <h2>Tourne, tourne, petit moulin</h2>
-      <img src="images/tourne_tourne_petit_moulin.png" alt="Tourne, tourne, petit moulin">
+      <img src="images/tourne_tourne_petit_moulin.png" alt="Tourne, tourne, petit moulin" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/n0INguuO9WM" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/n0INguuO9WM" allowfullscreen></iframe>
       </div>
       <pre>Tourne, tourne, petit moulin
 Frappent, frappent, petites mains
@@ -1233,9 +1242,9 @@ Petit poisson a bien nagé
     
     <section id="il-court-il-court-le-furet">
       <h2>Il court, il court, le furet</h2>
-      <img src="images/il_court_il_court_le_furet.png" alt="Il court, il court, le furet">
+      <img src="images/il_court_il_court_le_furet.png" alt="Il court, il court, le furet" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/dOA1BvPXrrk" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/dOA1BvPXrrk" allowfullscreen></iframe>
       </div>
       <pre>Il court, il court, le furet,
 Le furet du bois, Mesdames,
@@ -1255,9 +1264,9 @@ Le furet du bois joli.
     
     <section id="joli-tambour">
       <h2>Joli tambour</h2>
-      <img src="images/joli_tambour.png" alt="Joli tambour">
+      <img src="images/joli_tambour.png" alt="Joli tambour" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/lRwlkCnAwZ0" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/lRwlkCnAwZ0" allowfullscreen></iframe>
       </div>
       <pre>Joli tambour s'en revient de la guerre
 Joli tambour s'en revient de la guerre
@@ -1324,9 +1333,9 @@ Y'en a de plus jolies
     
     <section id="jai-perdu-le-do-de-ma-clarinette">
       <h2>J'ai perdu le do de ma clarinette</h2>
-      <img src="images/jai_perdu_le_do_de_ma_clarinette.png" alt="J'ai perdu le do de ma clarinette">
+      <img src="images/jai_perdu_le_do_de_ma_clarinette.png" alt="J'ai perdu le do de ma clarinette" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/XXL_uFHDaCA" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/XXL_uFHDaCA" allowfullscreen></iframe>
       </div>
       <pre>J'ai perdu le do de ma clarinette (bis)
 Ah si papa il savait ça tra la la (bis)
@@ -1385,9 +1394,9 @@ Au pas, au pas, au pas
     
     <section id="a-la-peche-aux-moules">
       <h2>À la pêche aux moules</h2>
-      <img src="images/a_la_peche_aux_moules.png" alt="À la pêche aux moules">
+      <img src="images/a_la_peche_aux_moules.png" alt="À la pêche aux moules" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/8JdJH0NKTnw" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/8JdJH0NKTnw" allowfullscreen></iframe>
       </div>
       <pre>À la pêche aux moules, moules, moules
 Je n'veux plus y aller maman
@@ -1422,9 +1431,9 @@ Et des petits compliments
     
     <section id="au-feu-les-pompiers">
       <h2>Au feu les pompiers</h2>
-      <img src="images/au_feu_les_pompiers.png" alt="Au feu les pompiers">
+      <img src="images/au_feu_les_pompiers.png" alt="Au feu les pompiers" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/iWyo5kcgIg0" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/iWyo5kcgIg0" allowfullscreen></iframe>
       </div>
       <pre>Au feu, les pompiers,
 Y a la maison qui brûle !
@@ -1446,9 +1455,9 @@ V'là la maison brûlée !
     
     <section id="mon-beau-sapin">
       <h2>Mon beau sapin</h2>
-      <img src="images/mon_beau_sapin.png" alt="Mon beau sapin">
+      <img src="images/mon_beau_sapin.png" alt="Mon beau sapin" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/uByvmGN9_Ik" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/uByvmGN9_Ik" allowfullscreen></iframe>
       </div>
       <pre>Mon beau sapin, roi des forêts
 Que j'aime ta verdure !
@@ -1476,9 +1485,9 @@ M'offrent la douce image.
     
     <section id="il-etait-une-bergère-qui-gardait-ses-moutons">
       <h2>Il était une bergère qui gardait ses moutons</h2>
-      <img src="images/il_etait_une_bergere_qui_gardait_ses_moutons.png" alt="Il était une bergère qui gardait ses moutons">
+      <img src="images/il_etait_une_bergere_qui_gardait_ses_moutons.png" alt="Il était une bergère qui gardait ses moutons" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/X9kQ5zumZww" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/X9kQ5zumZww" allowfullscreen></iframe>
       </div>
       <pre>Il était une bergère
 Et ron et ron, petit patapon
@@ -1544,9 +1553,9 @@ Nous recommencerons</pre>
     
     <section id="douce-nuit-sainte-nuit">
       <h2>Douce nuit, sainte nuit</h2>
-      <img src="images/douce_nuit_sainte_nuit.png" alt="Douce nuit, sainte nuit">
+      <img src="images/douce_nuit_sainte_nuit.png" alt="Douce nuit, sainte nuit" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/oSiM0AfRtz8" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/oSiM0AfRtz8" allowfullscreen></iframe>
       </div>
       <pre>Douce nuit, sainte nuit !
 Dans les cieux ! L'astre luit.
@@ -1588,9 +1597,9 @@ Qu'attendait Israël !
     
     <section id="en-passant-par-la-lorraine">
       <h2>En passant par la Lorraine</h2>
-      <img src="images/en_passant_par_la_lorraine.png" alt="En passant par la Lorraine">
+      <img src="images/en_passant_par_la_lorraine.png" alt="En passant par la Lorraine" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/CotZfnKGWHM" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/CotZfnKGWHM" allowfullscreen></iframe>
       </div>
       <pre>En passant par la Lorraine avec mes sabots (bis)
 Rencontrais trois capitaines, avec mes sabots dondaine
@@ -1633,9 +1642,9 @@ Oh, oh, oh ! avec mes sabots
     
     <section id="maman-les-petits-bateaux">
       <h2>Maman les petits bateaux</h2>
-      <img src="images/maman_les_petits_bateaux.png" alt="Maman les petits bateaux">
+      <img src="images/maman_les_petits_bateaux.png" alt="Maman les petits bateaux" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/CZgQj2lFirs" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/CZgQj2lFirs" allowfullscreen></iframe>
       </div>
       <pre>Maman les p'tits bateaux
 Qui vont sur l'eau
@@ -1659,9 +1668,9 @@ Contre la mer et le vent.
     
     <section id="cadet-rousselle">
       <h2>Cadet Rousselle</h2>
-      <img src="images/cadet_rousselle.png" alt="Cadet Rousselle">
+      <img src="images/cadet_rousselle.png" alt="Cadet Rousselle" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/spVySFyW64E" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/spVySFyW64E" allowfullscreen></iframe>
       </div>
       <pre>Cadet Rousselle a trois maisons, (bis)
 Qui n'ont ni poutres, ni chevrons, (bis)
@@ -1745,9 +1754,9 @@ Cadet Rousselle est bon enfant !
     
     <section id="malbrough-sen-va-t-en-guerre">
       <h2>Malbrough s'en va-t-en guerre</h2>
-      <img src="images/malbrough_sen_va_t_en_guerre.png" alt="Malbrough s'en va-t-en guerre">
+      <img src="images/malbrough_sen_va_t_en_guerre.png" alt="Malbrough s'en va-t-en guerre" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/DEHJLd8QRz8" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/DEHJLd8QRz8" allowfullscreen></iframe>
       </div>
       <pre>Malbrough s'en va-t-en guerre,
 Mironton, mironton, mirontaine,
@@ -1824,9 +1833,9 @@ Chacun s'en retourna. (bis)
     
     <section id="jaime-la-galette">
       <h2>J'aime la galette</h2>
-      <img src="images/jaime_la_galette.png" alt="J'aime la galette">
+      <img src="images/jaime_la_galette.png" alt="J'aime la galette" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/IOCfU_sdrM8" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/IOCfU_sdrM8" allowfullscreen></iframe>
       </div>
       <pre>J'aime la galette
 Savez-vous comment ?
@@ -1841,9 +1850,9 @@ Tra la la la la la la la.
     
     <section id="1-2-3-allons-dans-les-bois">
       <h2>1, 2, 3, allons dans les bois</h2>
-      <img src="images/1_2_3_allons_dans_les_bois.png" alt="1, 2, 3, allons dans les bois">
+      <img src="images/1_2_3_allons_dans_les_bois.png" alt="1, 2, 3, allons dans les bois" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/4KrBIhEfSBE" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/4KrBIhEfSBE" allowfullscreen></iframe>
       </div>
       <pre>1, 2, 3, allons dans les bois
 4, 5, 6, cueillir des cerises
@@ -1862,9 +1871,9 @@ Tra la la la la la la la.
     
     <section id="gentil-coquelicot">
       <h2>Gentil Coquelicot</h2>
-      <img src="images/gentil_coquelicot.png" alt="Gentil Coquelicot">
+      <img src="images/gentil_coquelicot.png" alt="Gentil Coquelicot" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/1q7vyChCnjE" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/1q7vyChCnjE" allowfullscreen></iframe>
       </div>
       <pre>J'ai descendu dans mon jardin (bis)
 Pour y cueillir du romarin.
@@ -1902,9 +1911,9 @@ Gentil coquelicot, nouveau.
     
     <section id="nous-nirons-plus-au-bois">
       <h2>Nous n'irons plus au bois</h2>
-      <img src="images/nous_nirons_plus_au_bois.png" alt="Nous n'irons plus au bois">
+      <img src="images/nous_nirons_plus_au_bois.png" alt="Nous n'irons plus au bois" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/LqLoX3owOf0" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/LqLoX3owOf0" allowfullscreen></iframe>
       </div>
       <pre>Nous n'irons plus aux bois, les lauriers sont coupés
 La belle que voilà, la laisserons-nous danser
@@ -1944,9 +1953,9 @@ Car les lauriers du bois sont déjà repoussés
     
     <section id="bateau-ciseau-la-rivière">
       <h2>Bateau, ciseau, la rivière</h2>
-      <img src="images/bateau_ciseau_la_riviere.png" alt="Bateau, ciseau, la rivière">
+      <img src="images/bateau_ciseau_la_riviere.png" alt="Bateau, ciseau, la rivière" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/JfvXO79Jc-Q" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/JfvXO79Jc-Q" allowfullscreen></iframe>
       </div>
       <pre>Bateau ciseau la rivière la rivière 
 Bateau ciseau la rivière au bord de l'eau
@@ -1985,9 +1994,9 @@ C'est un gros lapin
     
     <section id="une-puce-un-pou">
       <h2>Une puce, un pou</h2>
-      <img src="images/une_puce_un_pou.png" alt="Une puce, un pou">
+      <img src="images/une_puce_un_pou.png" alt="Une puce, un pou" loading="lazy">
       <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/D2QFYOxG4Co" frameborder="0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/D2QFYOxG4Co" allowfullscreen></iframe>
       </div>
       <pre>Une puce, un pou, assis sur un tabouret,
 Jouaient aux cartes, la puce perdait.
