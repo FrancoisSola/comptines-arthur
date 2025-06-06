@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://francoissola.github.io/comptines-arthur/sitemap_corrected.xml
