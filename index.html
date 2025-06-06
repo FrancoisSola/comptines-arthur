@@ -2045,28 +2045,29 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-// YouTube API Player Control + Intersection Observer pour vidéos
+// YouTube API Player Control — stop others when new video is played
 var players = [];
 
 function onYouTubeIframeAPIReady() {
   var iframes = document.querySelectorAll('iframe');
   iframes.forEach(function(iframe) {
-    var player = new YT.Player(iframe);
-    players.push({ iframe: iframe, player: player });
-  });
-
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      var item = players.find(p => p.iframe === entry.target);
-      if (!entry.isIntersecting && item) {
-        item.player.pauseVideo();
+    var player = new YT.Player(iframe, {
+      events: {
+        'onStateChange': onPlayerStateChange
       }
     });
-  }, { threshold: 0.1 });
-
-  players.forEach(function(p) {
-    observer.observe(p.iframe);
+    players.push(player);
   });
+}
+
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.PLAYING) {
+    players.forEach(function(player) {
+      if (player !== event.target) {
+        player.pauseVideo();
+      }
+    });
+  }
 }
 
 // Intersection Observer pour animation des images
