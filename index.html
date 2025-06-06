@@ -4,32 +4,62 @@
 <head>
   <meta charset="UTF-8">
   <title>Comptines pour Arthur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png">
   <style>
     html {
       scroll-behavior: smooth;
     }
     body {
-      font-family: "Comic Sans MS", "Arial Rounded MT Bold", "Arial", sans-serif;
+      font-family: 'Fredoka', sans-serif;
       margin: 20px;
       background-color: #121212;
+      background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05) 10%, transparent 10%), 
+                        radial-gradient(circle at 80% 30%, rgba(255,255,255,0.05) 10%, transparent 10%),
+                        radial-gradient(circle at 30% 70%, rgba(255,255,255,0.05) 10%, transparent 10%),
+                        radial-gradient(circle at 70% 80%, rgba(255,255,255,0.05) 10%, transparent 10%);
+      background-size: cover;
       color: #e0e0e0;
     }
     h1 {
       text-align: center;
       font-size: 3em;
       margin-bottom: 30px;
+      color: #82d9ff;
     }
     h2 {
       text-align: center;
       font-size: 2.2em;
       margin-top: 30px;
+      color: #a0e7e5;
+    }
+    nav {
+      background: #1c1c1c;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 10px;
+    }
+    .menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+    .menu.active {
+      display: flex;
+    }
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 2em;
+      text-align: center;
+      color: #82d9ff;
     }
     ul {
       list-style-type: none;
       padding: 0;
+      margin: 0;
       text-align: center;
-      margin-bottom: 50px;
     }
     ul li {
       margin: 15px 0;
@@ -37,8 +67,12 @@
     }
     a {
       text-decoration: none;
-      color: #82aaff;
+      color: #82d9ff;
       font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #a0e7e5;
     }
     section {
       margin-top: 70px;
@@ -50,10 +84,11 @@
       height: auto;
       display: block;
       margin: 30px auto;
-      border-radius: 20px;
+      border-radius: 30px;
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 1s ease-out, transform 1s ease-out;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
     img.show {
       opacity: 1;
@@ -65,7 +100,8 @@
       margin: 20px auto;
       aspect-ratio: 16 / 9;
       overflow: hidden;
-      border-radius: 12px;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
     .iframe-container iframe {
       width: 100%;
@@ -75,12 +111,13 @@
     pre {
       background: #1e1e1e;
       padding: 25px;
-      border-radius: 12px;
+      border-radius: 30px;
       white-space: pre-wrap;
       font-size: 2em;
       line-height: 1.8;
       margin: 30px auto;
       max-width: 800px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
     .back-to-top {
       text-align: center;
@@ -89,13 +126,17 @@
     .back-to-top a {
       display: inline-block;
       padding: 15px 25px;
-      background-color: #3366cc;
-      color: white;
+      background-color: #82d9ff;
+      color: #121212;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.5em;
       margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+    .back-to-top a:hover {
+      background-color: #a0e7e5;
     }
     #scrollTopBtn {
       display: none;
@@ -103,17 +144,22 @@
       bottom: 30px;
       right: 30px;
       z-index: 100;
-      font-size: 22px;
+      font-size: 30px;
       border: none;
       outline: none;
-      background-color: #3366cc;
-      color: white;
+      background-color: #82d9ff;
+      color: #121212;
       cursor: pointer;
-      padding: 20px;
+      padding: 25px;
       border-radius: 50%;
     }
-    /* Responsive smartphone */
     @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav ul {
+        display: none;
+      }
       img {
         max-width: 100%;
       }
@@ -126,8 +172,10 @@
 </head>
 <body id="top">
   <h1>Comptines pour Arthur</h1>
-  <h2>Sommaire</h2>
-  <ul>
+  <nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰ Sommaire</div>
+    <div class="menu" id="menu">
+      <ul>
 <li><a href="#promenons-dans-les-bois">Promenons-dans les bois</a></li>
 <li><a href="#alouette-gentille-alouette">Alouette, gentille alouette</a></li>
 <li><a href="#une-poule-sur-un-mur">Une poule sur un mur</a></li>
@@ -179,6 +227,8 @@
 <li><a href="#bateau-ciseau-la-rivière">Bateau, ciseau, la rivière</a></li>
 <li><a href="#une-puce-un-pou">Une puce, un pou</a></li>
 </ul>
+    </div>
+  </nav>
 
     <section id="promenons-dans-les-bois">
       <h2>Promenons-dans les bois</h2>
@@ -2028,10 +2078,11 @@ Jetée en enfer, par un ver de terre.
     
 <button onclick="topFunction()" id="scrollTopBtn" title="Remonter">🔝</button>
 <script>
+function toggleMenu() {
+  document.getElementById('menu').classList.toggle('active');
+}
 let mybutton = document.getElementById("scrollTopBtn");
-
 window.onscroll = function() {scrollFunction()};
-
 function scrollFunction() {
   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
     mybutton.style.display = "block";
@@ -2039,15 +2090,11 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
-
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
-// YouTube API Player Control — stop others when new video is played
 var players = [];
-
 function onYouTubeIframeAPIReady() {
   var iframes = document.querySelectorAll('iframe');
   iframes.forEach(function(iframe) {
@@ -2059,7 +2106,6 @@ function onYouTubeIframeAPIReady() {
     players.push(player);
   });
 }
-
 function onPlayerStateChange(event) {
   if (event.data == YT.PlayerState.PLAYING) {
     players.forEach(function(player) {
@@ -2069,10 +2115,7 @@ function onPlayerStateChange(event) {
     });
   }
 }
-
-// Intersection Observer pour animation des images
 const images = document.querySelectorAll('img.fade-in');
-
 const imgObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -2081,7 +2124,6 @@ const imgObserver = new IntersectionObserver((entries, observer) => {
     }
   });
 }, { threshold: 0.1 });
-
 images.forEach(image => {
   imgObserver.observe(image);
 });
