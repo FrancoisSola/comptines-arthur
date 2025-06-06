@@ -150,7 +150,26 @@
       padding: 25px;
       border-radius: 50%;
     }
-  </style>
+  
+nav ul li a:hover {
+    color: #ffcb77;
+    transform: scale(1.05);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.back-to-top a:hover {
+    background-color: #ffcb77;
+    transform: scale(1.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+@media (max-width: 600px) {
+  pre {
+    font-size: 1.5em;
+  }
+  nav ul li {
+    font-size: 1.8em;
+  }
+}
+</style>
   <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body id="top">
