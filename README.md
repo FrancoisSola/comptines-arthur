@@ -21,5 +21,5 @@ Arthur peut écouter et son papa peut chanter sans hésiter.
 
 🎵 **Un petit site fait maison pour de grands souvenirs au fil des comptines.**
 
-➡️ **[Voir le site](https://tonpseudo.github.io/tonrepo/)**
+➡️ **[Voir le site](https://francoissola.github.io/comptines-arthur/)**
 
